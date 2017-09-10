@@ -1,0 +1,18 @@
+---
+layout: post
+title: 'Ruby rant'
+comments: true
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+To follow up on a previous post I still have to say that there has not been one single experience in dealing with anything having to do with Ruby where I have not had all sorts of version problems.  An example of that is in what appears to be a simple instruction in my installing Open Shift in the EC2 where I need to install something called rubygem-thor.  As is in the EC2 RHEL it is not in a yum repo.  Trying to install it as a standalone rpm leads to needing ruby2.  Various sites say to install ruby2 I need rbenv.  All I need to do for that is to get it from github.  And it goes on an on.  These sorts of aggravations do not sound all that difficult when you are sitting at a shell prompt and installing various things as needed by hand but when you are trying to script it remotely using something like ansible it can take a while (all filled with non-productive time) trying to get a combination of events that actually work.
+While posting instructions on how to do something using individual manual steps is laudable I still believe that real value comes from something like:
+- launch an EC2 instance of RHEL 6.4
+- put your instance DNS name in a hosts file
+- install ansible
+- ansible-playbook xxxxx.yml

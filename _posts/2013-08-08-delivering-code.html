@@ -1,0 +1,17 @@
+---
+layout: post
+title: 'Delivering code'
+comments: true
+categories:
+- Technology
+tags:
+- eclipse
+- maven
+- mvn
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I am fortunate to be working with very technically astute and experienced people and see more evidence of that every day.  We are coming up on delivering some code and I got a few practical tips from my boss.  The code is controlled in a git repository, is a combination of Java/Javascript/html/AngularJS, developed using Eclipse and built using Maven.  I'm still a relative newbie to mvn but one tip was to not have anything special in your settings.xml because that might not convey to other developer environments without additional effort/communication and to blow away and regenerate your .m2/repository.  When I cleared out my local repository I discovered that several things would no longer build causing me to find and correct the issue in a few pom.xmls.  Those two factors probably make a big difference in the ability to convey projects to other developers more easily and I thought that I would pass them along to anyone else in a learning mode.  I am always looking for other suggestions/comments so please don't hesitate to pass them along.

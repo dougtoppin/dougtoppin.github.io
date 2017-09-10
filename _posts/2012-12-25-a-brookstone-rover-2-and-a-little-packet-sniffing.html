@@ -1,0 +1,19 @@
+---
+layout: post
+title: A Brookstone Rover 2 and a little packet sniffing
+categories: []
+tags:
+- cocoapacketanalyzer
+- node
+- rover
+- rover2
+- wireshark
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I was given a Brookstone Rover 2 for Christmas and have been experimenting a little with it.  If you are not familiar with the Rover it is a small, battery-powered, tracked vehicle that can be controlled via an iOS (iPad/iPhone) app.  It is a pretty neat device and fun to play with (and my dog is not entirely happy with this new development).  I would like to experiment a little with trying to get a Node.js script to control the vehicle and have found a couple of web pages referencing some work in the area. The API is not published for the Rover so it is necessary to "sniff" the commands being sent to it.  In the past I have used Wireshark (previously Ethereal) on Linux for this purpose.  Wireshark is available for OSX but it is an X application so to run it on OSX you also need to install an X server.  XQuartz is an option for that.  While looking around in this area I stumbled on the CocoaPacketAnalyzer (http://www.tastycocoabytes.com/index.php) which is a Cocoa based application making it a bit easier to use with many of the same capabilities as Wireshark.
+The Rover provides an access point so you have to associate with it (the SSID is an obvious one with ROVER in the name) to control it.  For controlling it via iOS you install the app, turn the Rover on and join the network when it appears.  I've been using my iPad to drive the Rover and capturing packets using my MacBook Air.  A web page for the Rover is available at http://192.168.1.100 with AC13 as both the account name and password.  That page will identify the firmware and UI versions along with the device id.  
+As I learn a bit more about this area I will post more tidbits.

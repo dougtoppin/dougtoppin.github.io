@@ -1,0 +1,19 @@
+---
+layout: post
+title: 'LeapMotion and Javascript example - swipe gesture detection'
+comments: true
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _post_restored_from: a:3:{s:20:"restored_revision_id";i:588;s:16:"restored_by_user";i:1;s:13:"restored_time";i:1378076814;}
+---
+I'm fascinated by the opportunity for improved and innovative user interfaces presented by the LeapMotion (<a title="http://leapmotion.com" href="http://leapmotion.com">leapmotion.com</a>). The holiday weekend gave me some time to play with it a little so I did some simple Javascript in an html page to learn a little more about it.
+In this case all that I wanted to do was detect a swipe motion (a movement from one side to the other).  Take a look at the following gist to see what I came up with.  (I used a github gist to show this because it is way easier than embedding it in the post.)
+
+&nbsp;<a href="https://gist.github.com/dougtoppin/6407432" title="https://gist.github.com/dougtoppin/6407432">https://gist.github.com/dougtoppin/6407432</a>
+
+This works reasonably well.  Try swiping using a single finger, all of your fingers held together and then all of them but held apart from each other.  It is interesting to see how the Leap is able to detect multiple fingers even when they are held together.  I put the entire example into the html to make it easier (it should work right out of the box for you).  The page contains some Javascript which will activate on load and, assuming that you have a LeapMotion device attached, will immediately start looking for swipe gestures (set up by the <b>'controller.on('gesture')...</b> and output some counters.  Note that the swipe action detection will actually detect many swipes during a single swipe phase so the api supports checking the state for the end of the event (<b>swipe.state=='stop'</b>).  The api also contains a <b>direction</b> indication so that you can tell which way the swipe went.  This is a rich api in terms of the data that you can get back from the device which means that all sorts of neat things can be done.  The drawback of course is that it also means that developers can implement very differently from each other so you are likely to find that Leap applications will differ in how they look and how you interact with them.

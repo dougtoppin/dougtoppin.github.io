@@ -1,0 +1,19 @@
+---
+layout: post
+title: 'SoapUI and how did we ever write software before the Internet and Google?'
+comments: true
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _oembed_b8ab5a9ccc582edcdf3fc52ac133f1fb: '{{unknown}}'
+  _oembed_667c78be86361d2cbcf447efd42a5478: '{{unknown}}'
+---
+I'm doing some investigation on getting weather data (of various sorts) via <a href="http://graphical.weather.gov/xml/" title="http://graphical.weather.gov/xml/">http://graphical.weather.gov/xml/</a> and needed to do a couple of quick tests.  In the past, on Linux, I've used SoapUI very successfully to act as a quick client for soap requests.  This time I'm on OSX and could not get the client to work.  It would start (with an ad for the pro edition in the right pane), consume the wsdl but when I tried to bring up the request editor it seemed to put it behind the pro ad.  Nothing that I did would fix the issue until I ran across a fix in the SoapUI forums from a year or two ago.  The fix was to edit the SoapUI plist and add a property to disable the browser.  This immediately corrected the issue and I was able to do what I needed with the client. It also made me think about how long it might have taken me to discover this myself before the advent of the Internet and Google.
+btw, the fix can be found here:
+http://www.soapui.org/forum/viewtopic.php?f=13&t=13837
+It boils down to adding a new string property under Java named "soapui.jxbrowser.disable", type "String", value "true".
+

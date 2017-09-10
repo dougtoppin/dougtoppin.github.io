@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Aviation, 1956 and See And Avoid"
+date: 2015-10-10 19:49
+comments: true
+categories: [aviation]
+description: Aviation, 1956 and See And Avoid
+keywords: aviation, vfr, collision
+
+---
+Watching a fascinating episode of Air Disasters about a 1956 mid air collision over the Grand Canyon between 2 commercial airliners.
+At that time pilots were given great discretion in altitude and navigation under the assumption that if they were VFR then they should be able to avoid each other ("see and void").
+
+In this accident the combination of a weather cell, clouds and impromptu sight seeing opportunity of the Grand Canyon  lead to a conflict.
+This accident lead to significant changes in commercial aviation.
+
+
+Also note that at that time there was no radar coverage at least in that area. This meant that ATC was only aware of aircraft location and status was entirely dependent on radio checkins by the aircrews.
+In the event of an accident ATC only knew that aircraft had not checked in at expected intervals and heard about the accident well after the fact.
+A local air tour pilot had seen evidence of an accident and notified authorities.
+
+
+Another aspect that is interesting to learn about is that the flight engineer (a long gone role along with the 3 pilot cockpit) had a great deal of responsibility in engine and aircraft systems monitoring.
+
+More at [https://en.wikipedia.org/wiki/1956_Grand_Canyon_mid-air_collision](https://en.wikipedia.org/wiki/1956_Grand_Canyon_mid-air_collision)

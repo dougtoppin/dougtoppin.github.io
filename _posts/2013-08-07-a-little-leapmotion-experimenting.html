@@ -1,0 +1,59 @@
+---
+layout: post
+title: 'A little LeapMotion experimenting'
+comments: true
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I received my LeapMotion a week or so ago and have not had much time to get to it so I decided to look at the SDK tonight.  The SDK comes with a few examples.  While I'm using it on my MacBook Pro I've been using Eclipse at work much more than XCode so I wanted to get it going in Eclipse as a Maven project and I had to do some investigation.
+
+I ran across <a href="http://www.restlessprogrammer.com/2013_03_01_archive.html" title="http://www.restlessprogrammer.com/2013_03_01_archive.html">http://www.restlessprogrammer.com/2013_03_01_archive.html</a> which helped me a bit.
+
+The key things that I did follow.
+
+Install the Leap SDK jar into my maven repository:
+mvn org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file -Dfile=~/Desktop/LeapMotion/LeapSDK/lib/LeapJava.jar -DgroupId=com.leapmotion.leap -DartifactId=leapMotion -Dversion=1.0.0 -Dpackaging=jar
+
+In Eclipse (Kepler)
+- create a Java project
+- import the Leap Sample.java file
+- convert the project to a Maven project with Configure->Convert to Maven project
+- add the Leap jar dependency to the pom.xml
+
+The pom.xml that I came up with follows:
+<pre class="brush: xml">
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+        &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+        &lt;groupId&gt;leapmotion-test-01&lt;/groupId&gt;
+        &lt;artifactId&gt;leapmotion-test-01&lt;/artifactId&gt;
+        &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+        &lt;dependencies&gt;
+                &lt;dependency&gt;
+                        &lt;groupId&gt;com.leapmotion.leap&lt;/groupId&gt;
+                        &lt;artifactId&gt;leapMotion&lt;/artifactId&gt;
+                        &lt;version&gt;1.0.0&lt;/version&gt;
+                &lt;/dependency&gt;
+        &lt;/dependencies&gt;
+        &lt;build&gt;
+                &lt;sourceDirectory&gt;src&lt;/sourceDirectory&gt;
+                &lt;plugins&gt;
+                        &lt;plugin&gt;
+                                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+                                &lt;version&gt;3.1&lt;/version&gt;
+                                &lt;configuration&gt;
+                                        &lt;source&gt;1.6&lt;/source&gt;
+                                        &lt;target&gt;1.6&lt;/target&gt;
+                                &lt;/configuration&gt;
+                        &lt;/plugin&gt;
+                &lt;/plugins&gt;
+        &lt;/build&gt;
+&lt;/project&gt;
+</pre>
+
+Once I did the above I was able to 'mvn clean install' and the jar was built.

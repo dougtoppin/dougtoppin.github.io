@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Splunk, AWS and Mobile Access"
+date: 2015-09-04 20:42
+comments: true
+categories: [splunk, logging]
+
+---
+Just a little follow up on the post I made a couple of days ago about using Splunk on the AWS.
+I noticed today that they also have iOS and Android apps and a mobile access server to support them.
+I installed the mobile access server on my ec2 instance, connected it to the Splunk server and then installed the iOS app on my iPad.
+I'm using it now to browse the examples and weather dashboard that I set up.
+Works like a champ.
+
+I also installed their example dashboards which you can use to see neat ways to visualize and how to create them.
+Nicely done.

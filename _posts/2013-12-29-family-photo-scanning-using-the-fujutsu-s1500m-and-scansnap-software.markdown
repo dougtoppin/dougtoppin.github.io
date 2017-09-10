@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Family photo scanning using the Fujutsu S1500M and ScanSnap software"
+date: 2013-12-29 16:29
+comments: true
+categories: 
+---
+I recently visited my parents and brought back a box full of old family pictures that I've been wanting to convert to digital form for a while.  I bought a Fujitsu S1500M (Mac version) scanner early this year and decided to use it.  The major advantags of this scanner over a flatbed are the automatic feeder and its speed. I'm able to stack a number of pictures and scan them as JPGs into a directory on my MacBook Pro and then import them into Aperture (v 3.5.1).  Over the last couple of days I've scanned 750 pictures without any trouble over ababout 4 hours of effort.  A few reviewers of photo scanners have commented on how using a non-flatbed scanner may damage photos because they are pulled across the scanner bars.  I have not had any issue with that so far as far as I can tell.  To date I have only used the scanner for my transitioning to a paperless office by going from print to searchable PDF which has worked very well for me.   For this case the abilities to stack groups of pictures and the scan speed are most important to me.  My workflow so far for this activity has been to group the pictures by date (when it is known) and then by size.  I have found it easier to scan the same or very similar sizes as 60 years of pictures have come in a variety of sizes and quality.  I then scan (using a simple ScanSnap JPG profile that I created), import into Aperture and then add location data (when it is known) by placing them on the map location.  I created an Aperture folder to hold the total of the pictures and then each set of pictures are imported as a project under that folder.
+
+In terms of issues or uncertainties one thing that I still do not have a handle on is whether or not to assign names to the faces detected because of the significant age differences in people.  I have not identified any people for these pictures so far because I'm concerned that it might throw off the Aperture/iPhoto face detection and identification function (which I find particularly convenient in general).
+
+I have no complaints about the S1500M and ScanSnap so far but do recommend that you consider a few aspects of family photo scanning before you jump into it.  Those aspects are primarily associated with organization.  The questions to ask yourself are whether or not you are going to organize by date, location, family members (there will be a number of combinations of peope you may encounter that make this difficult).  Another aspect of this process to consider is how or if you are going to make them available to your family members.  Will you upload them to a site such as flickr.com, export them to a flash drive or CD and how will your family members use whatever media you might send them if so.  I've been considering uploading the full set to AWS S3 buckets but doing that means that viewers will only be able to access them in full size form.  Sites such as Flickr enable various sizes for viewing and downloading making access to a large number of pictures more palatable and easier for unfamiliar people.
+
+Once I have completed the entire process of scanning and uploading I will follow up this post with my other experiences and observations.
+
+

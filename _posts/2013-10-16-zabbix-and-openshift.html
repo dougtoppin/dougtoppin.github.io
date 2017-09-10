@@ -1,0 +1,23 @@
+---
+layout: post
+title: 'Zabbix, OpenShift and Ansible'
+comments: true
+categories: []
+tags:
+- openshift
+- selinux
+- zabbix
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I've been doing some work with OpenShift recently and needed to add some monitoring to it.  I've used Nagios for other application in the past but this time it looked like Zabbix already had some OpenShift Origin tooling for it so I decided to go that way.  I'm using EC2 instances and found a very good site for some installation instructions off the Zabbix site at  https://www.zabbix.com/documentation/2.0/manual/quickstart
+I had one or two issues but the primary one was that the Zabbix UI would regularly put up a red banner saying that the Zabbix server was not running.  That ended us being due to the EC2 selinux which I disabled with 
+<strong><em># echo 0 > /selinux/enforce</em></strong>
+Someday, I need to spend the time to learn how to use selinux effectively rather than turning it off.
+
+I started using Ansible a while back to setup/provision remote servers and have been very impressed with it.  The primary advantages that I've experienced with it are that ssh access is the only requirement to use it (meaning the remote system does not need to be prepared for it) and that it lets me script (meaning control and document) the process that I'm using to set the remote systems up.  I'm using it to set up a number of EC2 instances and being able to group server and perform an action en masse works well.  An example of that would be installing git each on instance.  I intend to add some info on how I'm using ansible to my github repo shortly so hopefully you can find a little more there.
+
+As I evolve this some more I will append to this.

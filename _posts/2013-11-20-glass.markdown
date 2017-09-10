@@ -1,0 +1,47 @@
+---
+layout: post
+title: "Glass"
+date: 2013-11-20 21:07
+comments: true
+categories: 
+---
+
+I have been able to borrow Google Glass from work for a few days and wanted to pass along my observations.
+
+* Pros
+
+  + The first day of the future, stepping stone to practical augmented reality
+  + Ability to write software for it (interface with it actually)
+  + Does not weigh much, is not a burden
+
+* Cons
+
+  + Does not fold up to easily fit in a pocket
+
+
+  + Requires Internet connectivity for many functions
+  + Battery life is less than a full day
+  + Looking up and to the right gets a little tiring
+  + For this model, you can only register it for one person.  This makes it a little difficult to share, particularly with other developers
+  + I had to keep moving it up higher on the bridge of my nose or else I could not see anything in it
+  + Is way beyond a casual expense
+  + Is not something that you would want to watch a movie with or view pictures on
+  + The projecton optic is on a little stem that adjusts in an out and not up and down, I had to fiddle with this a few times before I got it to the right angle for me, there is also a little silver button on the frame just behind it where you can manually take a picture (as opposed to verbally commanding it)
+
+
+  + I was not able to get a good representative picture of what you actually see but it is very visible, albeit small, once you get it adjusted correctly
+  + I keep reading about privacy concerns and restaurants or other public estalishments banning the use of Glass.  I suppose that it would get irritating if you were sitting somewhere and someone was holding a camera up and pointing it at you so I can understand their perspective.  Wearing them in public would certainly attract attention, potentially with negative consequences.  This is also likely to impact their adoption on a broader scale, particularly in non-technology early adopter areas.
+
+* Notes
+  + The thing that looks like a button that says "GLASS" on the right ear piece is actually the bone conductor (don't start poking it)
+
+
+  + Generally, apps will run in the Google cloud and interface with Glass (as opposed to running in Glass itself)
+  + I would prefer a bigger pair of googles that are directly in your line of sight and that you look through, that would be actual augmented reality
+
+
+All in all it is an impressive piece of technology but note that the technology is not just Glass itself but also the Google server and cloud technology that enables it.  I like it but I feel like $1,500. is a stretch at this point.  I recently heard that an eye tracking sensor will be coupled to it which will let it detect when you are looking at it.  This might alleviate the head or hand movements requirement to get its attention.  I think that the keys to making this technology successful include visibility in your line of sight as well as it (Glass and the Google servers) deducing what you are doing and thus likely to be interested in and displaying data about your surroundings or actions without you have to request it are what will popularize it. 
+
+An interesting point that I heard on a recent podcast is that Glass is probably too small to display any sort of visual advertising.  As a result it is less likely to be attractive to advertisers because it won't be useful unless in a controlled contextual situation rather than trying to overlay an ad in the limited space that you were using which might annoy the wearer.  The audio capability might be an opportunity for audible advertising.  This coupled with your location and the direction that you are looking in might be a way to have a relevant ad based on what should be in your line of sight.  This would be an interesting area to explore.
+
+

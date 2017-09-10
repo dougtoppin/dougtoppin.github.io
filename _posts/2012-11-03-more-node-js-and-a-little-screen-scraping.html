@@ -1,0 +1,74 @@
+---
+layout: post
+title: More Node.js and a little screen scraping
+categories: []
+tags:
+- node.nodejs.yql
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+The more time that I spend using node (Node.js) the more impressed that I am with it.  I have been interested in doing a little screen scraping of some web pages and decided to give node a try for doing it.  I ran across this link <a href="http://nodetoolbox.com/packages/yql" title="http://nodetoolbox.com/packages/yql">http://nodetoolbox.com/packages/yql</a> which covered using node and the YQL (Yahoo Query Language) to retrieve a page and parse the content into accessible data.
+I did a little more research to get an understanding of how it is working and thought that I would pass along what I found.
+The below script will get the weather from Yahoo for the zipcode 20147, turn the returned content into a DOM, query several groups of data from the DOM and then output it.  I modified the original script to tailor it a bit.
+
+The script I am experimenting with looks like this:
+<pre>
+// weather.js
+// Use YQL to retrieve a Yahoo weather page, extract fields from it and output
+// to stdout.
+// (original version of this script copied from
+// http://nodetoolbox.com/packages/yql)
+
+var YQL = require('yql');
+
+new YQL.exec("SELECT * from weather.forecast WHERE (location = @zip)",
+     function(response) {
+     var location = response.query.results.channel.location;
+         condition = response.query.results.channel.item.condition;
+         wind = response.query.results.channel.wind;
+         units = response.query.results.channel.units;
+
+     console.log("The current weather in " + location.city + ', ' +
+         location.region +
+         ", (" + location.country + ")" +
+         " is " + condition.temp + " degrees and " +
+         condition.text.toLowerCase() +
+         ", wind chill is " + wind.chill +
+         ", at " + wind.speed + " " + units.speed +  " from " +
+         wind.direction);
+
+}, {"zip": 20147});
+</pre>
+
+The first thing that you need to know is the structure of the returned data so that you know how to access it without having to parse it yourself and look for keywords.  The description of the Yahoo weather forecast page can be found at <a href="http://developer.yahoo.com/weather/" title="http://developer.yahoo.com/weather/">http://developer.yahoo.com/weather/</a>
+Once you know that all you need to have is a basic idea of how to use the YQL to retrieve and parse out what you want.
+YQL.exec contains the retrieval (from weather.forecast which is a YQL weather api) using a location specified by zip code (@zip)
+with the search value being '20147'.
+The key part of the response data description is:
+<pre>
+...
+&lt;channel&gt;
+  &lt;title&gt;Yahoo! Weather - Sunnyvale, CA&lt;/title&gt;
+  &lt;link&gt;http://us.rd.yahoo.com/dailynews/rss/weather/Sunnyvale__CA/*http://weather.yahoo.com/forecast/USCA1116_f.html&lt;/link&gt;
+  &lt;description&gt;Yahoo! Weather for Sunnyvale, CA&lt;/description&gt;
+  &lt;language&gt;en-us&lt;/language&gt;
+  &lt;lastBuildDate&gt;Fri, 18 Dec 2009 9:38 am PST&lt;/lastBuildDate&gt;
+  &lt;ttl&gt;60&lt;/ttl&gt;
+  &lt;yweather:location city="Sunnyvale" region="CA"   country="United States"/&gt;
+  &lt;yweather:units temperature="F" distance="mi" pressure="in" speed="mph"/&gt;
+  &lt;yweather:wind chill="50"   direction="0"   speed="0" /&gt;
+  &lt;yweather:atmosphere humidity="94"  visibility="3"  pressure="30.27"  rising="1" /&gt;
+  &lt;yweather:astronomy sunrise="7:17 am"   sunset="4:52 pm"/&gt;
+...
+</pre>
+Use the tag hierarchy to access the data that you need.  For example, response.query.results.channel.units will get the
+units of returned data.  Using the script should return "mph".  The script creates the variables "location", "condition", "wind" and "units" to hold the associated sets of data.
+The script then writes to stdout (using console.log) the formatted output and specific data values that I want such as "wind.speed".
+The output from the script should be the following:
+<pre>The current weather in Ashburn, VA, (US) is 40 degrees and mostly
+cloudy, wind chill is 37, at 5 mph from 280</pre>
+This is an interesting exercise and you should give it a try if you are into this kind of thing.
+

@@ -1,0 +1,34 @@
+---
+layout: post
+title: 'OpenShift Enterprise running in VirtualBox Instances of RedHat Linux - part 1'
+comments: true
+categories:
+- Technology
+tags:
+- openshift
+- redhat
+- squidman
+- virtualbox
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I've been doing some work with RedHat OpenShift Enterprise (<a href="http://www.redhat.com/products/cloud-computing/openshift-enterprise/" title="http://www.redhat.com/products/cloud-computing/openshift-enterprise/">http://www.redhat.com/products/cloud-computing/openshift-enterprise/</a>) and thought that I would document a few tidbits that others might find useful.  The configuration that I'm using is running VirtualBox on my MacBook Pro to host two instances of Red Hat Enterprise Linux Server release 6.4 (64bit), one for a broker and one for a node.  It is useful/necessary to use static/predictable IPs with OSE because a dhcp environment can make things more difficult.  VB can provide a dhcp server which will assign expected IPs to the Linux instances.  However, I have the instances running in 'Host-only Adapter' mode so they are able to see each other but that does not allow access to the Internet which is necessary for yum repository access to update/install. A means of providing Internet access to the instances is to install <a href="http://squidman.net/squidman/" title="http://squidman.net/squidman/">SquidMan</a> on the Mac which will provide a proxy facility.  Configuring SquidMan was very easy and only involved setting the desired proxy port and adding the IPs of the Linux instances to the Clients list.  Once SquidMan was ready I only needed to configure the Linux instances by editing /etc/rhsm/rhsm.conf (note that I am using subscription-manager and not rhn) to add the following:
+<ul>
+<li>proxy_hostname=192.168.56.1 (the VirtualBox assigned IP for the Mac)</li>
+<li>proxy_port=8089 (the port I told SquidMan to use)</li>
+</ul>
+Then at the Linux shells I added the proxy env var with the following to enable curl and other utility access to the Internet.
+<br>
+export http_proxy=http://192.168.56.1:8089/ 
+<br>
+Assuming that everything configured correctly you should be able to use curl on the Linux instances to access a website with
+<br> curl http://www.google.com
+<br>
+Using the RedHat subscription-manager via this approach requires including the proxy info as an argument like this:
+<br>
+subscription-manager --proxy=192.168.56.1:8089 register
+<br>
+I will try to continue to add more updates on using OSE and all of the cool stuff that is possible with it.

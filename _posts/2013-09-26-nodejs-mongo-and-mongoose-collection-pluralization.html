@@ -1,0 +1,12 @@
+---
+layout: post
+title: 'NodeJS, Mongo and Mongoose collection pluralization'
+comments: true
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+If you happen to be using NodeJS, Mongo and Mongoose you can spend a couple of hours debugging before discovering that Mongoose pluralizes collection names (silently) unless you explicitly tell it not to.  You can see this happen in queries if you start mongod in verbose mode with -vv.   http://stackoverflow.com/questions/7230953/what-are-mongoose-nodejs-pluralization-rules

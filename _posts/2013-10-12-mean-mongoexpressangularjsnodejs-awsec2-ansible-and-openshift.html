@@ -1,0 +1,28 @@
+---
+layout: post
+title: 'MEAN (Mongo,Express,AngularJS,NodeJS), AWS/EC2, Ansible and OpenShift'
+comments: true
+categories:
+- Technology
+tags:
+- angularjs
+- ansible
+- aws
+- ec2
+- express
+- mean
+- nodejs
+- openshift
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+During the last couple of months I've been fortunate enough to work using a number of new(ish) software technologies and wanted to pass along a little about them.
+One activity was a 3 week project where 3 of us used the MEAN stack (Mongo, Express, AngularJS and NodeJS) to quickly implement a document processing system.  MEAN was decided to be the best stack for the system and turned out to be very efficient for use and a lot of fun to work with.  The document processing system contains a number of functions including polling a directory where a customer would upload XML and PDF files, picking up any found, transforming the content to JSON, insertion into a MongoDB, supporting an AngularJS UI where a user could login and perform various functions on the record content, upload the files to an AWS S3 bucket and let the user publish the record content into another XML format file.  The work required moving quickly and we were able to get the basic workflow going within a week and a half and complete the project in 3 weeks.  The code all ran on AWS EC2 instances (one for Mongo and one for the node based UI).  Having the front and backends be in Javascript enabled us all to work on both ends of the wire which was also very helpful and I recommend this stack for that reason.  Another benefit was it was entirely using open source software meaning the only costs were labor and AWS usage.  I've gotten a great deal of respect for the AWS but using it in the real world does lead to a few lessons learned.  One of the lessons was that EC2 transfers of files (upload via scp/sftp for example) could take a few seconds for multi-megabyte files which would cause the polling code to detect the file (using the Node watcher.stalker function) before it was completely available.  This caused us to have to refactor the code a few times to finally get it working correctly.  The lesson learned in that case was that it would have been much better to use an sftp server that would let us control the upload by naming the file with a temporary name while it was in transit and renaming it to the final name when complete.  Handling this otherwise is not as easy as it sounds if you do not control the upload.  I would like to have tried having our UI support an upload via the browser so that it was entirely under our control but we did not have time for that.  Next time I hope to have that already working and in my back pocket (github here I come).
+After that project was complete I started on one involving OpenShift and have been working in that area. With that I am getting the opportunity to use Ansible for installation/provisioning EC2 instances for OpenShift.  If you are not familiar with it Ansible is an alternative to Puppet/Chef and other provisioning systems with a significant advantage in its favor being that the only configuration required on the remote system is ssh access.  This enables the rapid and simple creation of AWS EC2 instances followed by Ansible playbook script execution for the installation of your code.  This has worked very well for me so far and I expect to making much more use of it from now on.
+OpenShift is described as "The open source upstream of OpenShift, the next generation application hosting platform developed by Red Hat.  OpenShift Origin includes support for a wide variety of language runtimes and data layers including Java EE6, Ruby, PHP, Python, Perl, MongoDB, MySQL, and PostgreSQL".  It enables a variety of things but primarily lets you develop and run code in a standard packaged form that accommodates cloud architectures along with many other things.  I expect to be passing along quite a bit more about that in the future so check back every now and then.
+
+
+

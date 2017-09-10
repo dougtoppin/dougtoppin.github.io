@@ -1,0 +1,1 @@
+I’ve been improving my ansible (and indirectly AWS) knowledge and found a video at http://answersforaws.com/episodes/2-ansible-and-aws/ to be very helpful. There were several tidbits associated with provisioning that I found useful. I had been doing a couple of things manually and the video enlightened me a bit.

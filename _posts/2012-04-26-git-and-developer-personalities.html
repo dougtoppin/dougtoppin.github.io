@@ -1,0 +1,14 @@
+---
+layout: post
+title: Git and developer personalities
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I had an interesting experience today with something a developer said that brought back a memory and confirmed something from it.  Linus Torvalds spoke on git at Google in 2007 (http://www.youtube.com/watch?v=4XpnKHJAok8) and made a comment that I have remembered and heard a practical example of today.  Linus said that one of the primary benefits of git was that a distributed repository would encourage developers to commit code more often.   This is because many developers that use a centralized repository (such as cvs) are reluctant to commit changes that they feel are not ready to be seen by anyone else.  As a result they wait too long to commit changes running the risk of losing changes due to a storage failure or changing something and needing to get it back with no way to do that.    With their git repository being their own they can commit without being concerned about visibility.   The developer that I was speaking today said that he was moving changes to a test machine using a flash drive.  I asked why he was not just committing his changes and then checking out and building on the test machine.  His reply was that he did not want anyone to see his changes until they were complete.  It was an interesting confirmation of exactly what Linus said.  In my case I have used a development branch in the past so that I could keep versioning (and preserving) mods until I was ready to merge them into the trunk.  I do recommend watching the above video (or else search for 'linus torvalds google git video) because it is insightful in several ways.
+
+&nbsp;

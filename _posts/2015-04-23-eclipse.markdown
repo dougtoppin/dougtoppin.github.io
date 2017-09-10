@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Eclipse, Goclipse and the no gocode path provided error"
+date: 2015-04-23 18:49
+comments: true
+categories: 
+---
+I'm doing a little Go work and am using the Goclipse plugin for Eclipse.
+In setting it up I kept getting the error `no gocode path provided` an my autocomplete was not working.
+I just stumbled on what was wrong and wanted to pass it along in case anyone runs into it.
+`gocode` provides autocomplete for your go work in Eclipse/Goclipse.
+
+You need to install `gocode` [https://github.com/nsf/gocode](https://github.com/nsf/gocode) first.
+Then in the eclipse preferences look for `go` -> `tools` and browse and set the `gocode path`.
+At that point autocomplete for your `go` projects should start working (and that error should stop happening).
+

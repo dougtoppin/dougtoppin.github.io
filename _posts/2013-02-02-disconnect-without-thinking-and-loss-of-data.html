@@ -1,0 +1,16 @@
+---
+layout: post
+title: 'Disconnect without thinking and loss of data'
+comments: true
+categories: []
+tags:
+- aperture
+- iPhoto
+- photography
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+A couple of weeks ago I spent a lot of time removing thousands of duplicate and just plain poor pictures from my Aperture photo library.  I moved the library to an external disk which in conjunction with a Flickr account sync setting caused a issue a few days ago.  Because the photo library is on an external disk (Thunderbolt interface to my MacBook Pro) I have to dismount it when I take the MBP mobile.  Unfortunately, I had a Flickr account sync flag set so that whenever Aperture runs it first gets to the photo library and then starts checking my Flickr account.  This prevents the external library disk from being able to dismount.  I waited a bit and then just disconnected the drive because I needed to leave.  The unfortunately consequence of that is that my library is now corrupted and Aperture is unable to load or repair it.  I've tried several things including remove the Aperture preferences plist and the command/option start of Aperture to force a repair but not luck with anything.  It looks like I'm going to have to transfer my old iPhoto library to the MBP again and once again go through the cleanup process.  The lessons learned on this include ensuring that Time Machine is backing up the photo lib (was not because it is on an external disk) and to think through the implications of sync'ing with Internet services automatically.  I do wish that Apple would put some time in on Aperture to ensure that the window of risk is as small as possible for situations like this though.

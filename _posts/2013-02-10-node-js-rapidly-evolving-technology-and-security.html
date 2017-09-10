@@ -1,0 +1,17 @@
+---
+layout: post
+title: 'Node.js, rapidly evolving technology and security'
+comments: true
+categories: []
+tags:
+- node
+- node.js
+- security
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+Node.js has had an explosive growth in the 3 years that it has existed.  This is due to a variety of factors well covered elsewhere but one thing that I do not see addressed often is the subject of security.  When Javascript is executed in the browser the security implications are likely limited to that browser instance.  However, when it is on the server side like Node.js the implications are that once a Node instance is corrupted all subsequent usages may suffer.  A recent paper on this subject can be found at <a href="http://lab.cs.ttu.ee/dl93" title="Analysis of Node.js platform web application security">Analysis of Node.js platform web application security</a>.  This is a 60 page Master's thesis that reviews some of the dangers of a rapidly adopted and evolving software technology.  Many developers are making use of it without the tooling and historical lessons learned type knowledge to limit the risk of unexpected behaviors.  This is of course an opportunity for developers to come up with tooling to evaluate poor coding practices or inherent security risks in the code itself or the libraries being referenced.  Some of the complexity of coming up with security evaluation related tooling includes checking the libraries being utilized.  A very long library tree can be in effect due to libraries including libraries.  Because of the rate of evolution libraries are potentially updated very regularly potentially inducing bugs in subsequent revisions.  This is likely to lead to stringent package definition requirements with specific versions being referenced.  When I compare this to the C language with the use of a number of system libraries that were versioned on a much more monolithic level I can't see how Node will avoid having to package up groups of libraries just to reduce the management complexity of updates at a reasonable rate.
+The paper is a good read and you should consider studying it if not just for informational purposes.

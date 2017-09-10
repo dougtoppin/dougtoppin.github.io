@@ -1,0 +1,15 @@
+---
+layout: post
+title: Node.js as a test fixture
+categories: []
+tags:
+- node
+- node.js
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I've been using Node.js (http://nodejs.org and https://github.com/joyent/node) for a little now and am extremely impressed with the ease of installing and using it for several purposes.  If you are not familiar with node it is an implementation of a server based Javascript (as opposed to browser based).  If you can write a little Javascript you can use node to perform any sort of web service that you can think of.  I am involved with several applications (iOS and Linux) that are being developed by a geographically distributed team.  The interface between the apps is primarily JSON and the applications are being developed in parallel making unit testing difficult.  We started using node scripts to act as test fixtures allowing the developer to define the interface to his application in a node script and make it available to the people that will be interfacing with it (similar to a test driven development model).  One of the applications is Drools running in Eclipse on an MS Windows platform and we are hoping that since node should run in all of our environments that the Drools guy will be able to use it just as effectively.  I had previously done  a little work on Rails but found the installation of RoR to be somewhat heavy and have a number of dependencies.  Node literally went in in minutes for me by comparison.
+I will post again once we have more practical experience but thought that I would pass it along now for anyone interested.

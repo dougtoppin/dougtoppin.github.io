@@ -1,0 +1,24 @@
+---
+layout: post
+title: Xcode build error "File is universal (3 slices) but does not contain a(n) armv7s
+  slice"
+categories: []
+tags:
+- apple
+- ios
+- xcode
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I'm doing a little experimentation with Couchbase and iOS and, while trying a test, ran across a new Xcode build error.
+The error output is:
+
+"(null): File is universal (3 slices) but does not contain a(n) armv7s slice: /Users/dougtoppin/Desktop/iOS/Demo-couchdb-01/Couchbase.framework/Couchbase for architecture armv7s".
+
+I ran across a few different suggested solutions but one small change fixed it for me.  All that I had to do was the following in Xcode:
+Build Settings -> Architectures -> Build Active Architecture Only -> toggle from no to yes
+
+I ran across that tidbit at http://stackoverflow.com/questions/12402092/file-is-universal-3-slices-but-does-not-contain-an-armv7s-slice-error-for-st

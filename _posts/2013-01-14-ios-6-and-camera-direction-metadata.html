@@ -1,0 +1,22 @@
+---
+layout: post
+title: 'iOS 6 and camera direction metadata'
+comments: true
+categories: []
+tags:
+- ios
+- photography
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I've gained a real appreciation for gps information being embedded in images primarily because it makes it much easier to find images by location instead of remembering when they were taken.  I recently ran across a mention in a blog about the iPhone 5 and iOS 6 adding camera direction as well to the image metadata.  With just location data you know where a picture was taken but what should appear in it.  Adding the direction means that you can now find objects that you are interested in by noting the location of what you are interested in, defining a radius from it, searching each of your images for being within that bounding box and then searching for ones that are pointing in the correct direction.  I'm experimenting with an OSX automator function for this now (which is giving me an appreciation for the automator at the same time).  The direction field in the exif data is called kMDItemImageDirection.  To see all of the exif data using OSX try the following in the shell 'mdls imagefilename'.
+Note that on OSX you can search metadata using Spotlight or you can use mdfind in the shell.  An example of using mdfind to search using image metadata looks like the following.  It is searching for any image file with a latitude between 30 and 34 and with the camera direction value greater than 180 degrees (from true north).
+
+<em><strong>mdfind -onlyin ~/Pictures/ "kMDItemLatitude>30 && kMDItemLatitude<34 && kMDItemImageDirection>180"</strong><em></em>
+
+Another of the potential uses of location and direction data might be that you could construct a 3d view of a location by combining all of the images containing the same location.  As a test, it would be fascinating to take a number of pictures of a group of people from different locations, identify one person and then construct a 3d view of that individual.
+
+

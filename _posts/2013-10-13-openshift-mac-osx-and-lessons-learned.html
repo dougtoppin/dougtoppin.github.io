@@ -1,0 +1,16 @@
+---
+layout: post
+title: 'OpenShift, Mac OSX, IPv4 vs IPv6 and lessons learned'
+comments: true
+categories: []
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I've been doing work with OpenShift Origin and using a pre-built VirtualBox VM for convenience.  This has worked well for me in the office and during a recent novalug meeting but when I tried it at home I had an issue with the OO host where it appeared to hang during boot.  The OO console window went dark and would occasionally flash and I could not ssh into it.  If I control c'd the console I would get a shell prompt but it was clearly not working correctly.  It turned out it was my Apple Airport wifi network caused a VirtualBox dhcp issue.
+More on that here: <a href="http://www.virtualbox.org/manual/ch06.html">http://www.virtualbox.org/manual/ch06.html</a>
+It includes the following: "On Macintosh hosts, functionality is limited when using AirPort (the Mac's wireless networking) for bridged networking. Currently, VirtualBox supports only IPv4 over AirPort. For other protocols such as IPv6 and IPX, you must choose a wired interface."
+This problem caused me to lose a few hours pursuing it over the weekend but once I found this I moved to my ethernet at home and the problem went away.  I'm sure that I could have eventually figured out how to proxy the OO instance but I had to keep moving forward.

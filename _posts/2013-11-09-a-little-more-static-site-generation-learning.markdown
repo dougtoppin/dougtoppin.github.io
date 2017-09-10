@@ -1,0 +1,8 @@
+---
+layout: post
+title: "a little more static site generation learning"
+date: 2013-11-09 19:38
+comments: true
+categories: 
+---
+I've been interested in moving my domain (dougtoppin.com) and blog that is hosted there to another site mostly because of the cost (I've been paying too much for it) as well as just for the experience.  I've been using Wordpress for that blog which I do not have any real complaints with but I think that it is probably overkill for my needs.  I decided to move to Github pages some time ago and as a result started looking at what are called "static site generators" (SSGs) for it.  If you are not familiar with SSGs they are sites that primarly just contain html files as opposed to a server that is interacting with the browser.  Publishing a blog via an SSG involves writing simple text files (using a markdown language), a little software reading the text files and creating html and then pushing those files to the SSG.  Advantages of this include much lower weight blog hosting which will probably be faster and cheaper.  After making the effort to transition I've begun to learn a few of the disadvantages as well.  One of them includes the fact that you will probably not be able to post from a phone/tablet without involving some intermediary server.  This is because the phone/tablet will probaby not be able to perform the html generation and push the the SSG.  I'm in that phase now where I'm trying to decide how I might able to do that.  Right now I'm evaluating whether or not I can do something where I use Vagrant to quickly spin up an EC2 instance and do the conversion/push.  More on this subject later.

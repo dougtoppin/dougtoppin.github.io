@@ -1,0 +1,27 @@
+---
+layout: post
+title: 'Using the JBoss Data Grid (Infinispan) cli to show your objects in cache'
+comments: true
+categories: []
+tags:
+- cache
+- cli
+- datagrid
+- infinispan
+- jboss
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+For anyone interested in the JBoss Data Grid (6.1) or Infinispan I have been doing a little work using it for a remote cache (hotrod).  I'm keeping a simple class in it that contains some strings and lists of strings.  One problem that I had been having was that I could not figure out how to use the JDG cli to show me the objects that I had in cache (which is really helpful for debugging).  It would always return a 'null' on a get.  I figured out how to get it to actually show me my objects in cache today.  All that was required was for me to install my jar containing my classses as a module under JDG modules like modules/com/dougtoppin/cache/main and put the usual module.xml in that dir.  The other thing that I had to do was to make my module a dependency in infinispan by adding it to modules/org/jboss/as/clustering/infinispan/main/module.xml.  Once I did that I was able to get the cli to show me my entries with: 
+
+* $ ./jdg-cli.sh
+* connect remoting://localhost:49999
+* stats myCache
+* cache myCache
+* encoding  hotrod
+* get "myKey"
+
+That would dump my object out along with the class related information.  I thought that I would pass that along in case anyone else is interested in the subject.  I'm working up a simple quickstart or tutorial type demo that shows the whole process end-to-end.  If anyone happens to know a better way please pass it along to me.  I could not find anything about how to do this.

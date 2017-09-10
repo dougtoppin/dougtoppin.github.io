@@ -1,0 +1,10 @@
+---
+layout: post
+title: "AWS"
+date: 2014-04-06 15:04
+comments: true
+categories: 
+---
+If you are an AWS type and use the S3 then the following is a worthwhile read. It has to do with security/permissions on S3 buckets and how granting excessive or wide-open perms may be a risk for you. There are reasons to grant 'everyone' read access for some cases, the risk I think is that you or someone else may forget what the perms are someday in the future and upload sensitive stuff. What this does show is the value of regular audits of your AWS usage and looking to see what is public/accessible and so on.
+
+https://community.rapid7.com/community/infosec/blog/2013/03/27/1951-open-s3-buckets
