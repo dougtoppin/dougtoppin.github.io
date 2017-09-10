@@ -17,10 +17,13 @@ The primary advantage of using Docker for this is you don't have to install anyt
 
 From now on I should be only doing the following when I want to view it locally before pushing.
 
+If you are familiar with Jekyll you might notice the use of the ```JEKYLL_ENV``` environment variable.
+This is use to indicate whether or not this is a production environment and do things like notify Google Analytics.
+For local testing I like to be able to see analytics data appear which is why I am enabling this by setting it during the Docker run command.
+
 ```
 export JEKYLL_VERSION=3.5
-docker run --rm --volume=$PWD:/srv/jekyll -it jekyll/jekyll:$JEKYLL_VERSION jekyll build
-docker run --rm --volume=$PWD:/srv/jekyll -it -p 4000:4000 jekyll/jekyll:$JEKYLL_VERSION jekyll serve
+docker run --rm --volume=$PWD:/srv/jekyll -it -p 4000:4000 -e JEKYLL_ENV=production jekyll/jekyll:$JEKYLL_VERSION jekyll serve
 ```
 
 What I tend to find when reading about how to use Jekyll to create a GitHub Pages blog is that the writer assumes that you already know some basics (at least) and a few steps or tidbits are left out.
@@ -31,5 +34,6 @@ I intend to do my own little writeup on how to use Jekyll with GitHub Pages for 
 * clone the blog repo somewhere else and work on it
 * build and view it locally
 * what you do NOT need to commit once you do build it locally (this is the tidbit always left out of instructions)
+* how to test new versions of the blog by doing things like forking a theme repo and renaming the existing GitHub Pages repo to test it
 
 More to come.
