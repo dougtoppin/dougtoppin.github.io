@@ -41,5 +41,5 @@ All of this is facilitated by compute power availability.
 
 I wonder what $20 of immense compute power could produce in terms of a unique VR experience in real time?
 
-One of my previous posts on this subject can be found at [http://blog.dougtoppin.name/blog/2015/01/28/virtual-reality-and-film-making/](http://blog.dougtoppin.name/blog/2015/01/28/virtual-reality-and-film-making/)
+One of my previous posts on this subject can be found at [http://blog.dougtoppin.name/film/vr/2015/01/28/virtual-reality-and-film-making.html](http://blog.dougtoppin.name/film/vr/2015/01/28/virtual-reality-and-film-making.html)
 

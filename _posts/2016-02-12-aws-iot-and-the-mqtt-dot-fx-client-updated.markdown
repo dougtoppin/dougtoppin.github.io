@@ -9,7 +9,7 @@ keywords: aws, iot, mqtt, mqtt.fx
 
 ---
 
-In the previous post [http://blog.dougtoppin.name/blog/2015/10/09/aws-iot-and-the-mqtt-dot-fx-client/](http://blog.dougtoppin.name/blog/2015/10/09/aws-iot-and-the-mqtt-dot-fx-client/) I passed along a few tidbits about using the MQTT client with the AWS IoT service.
+In the previous post [http://blog.dougtoppin.name/aws/iot/mqtt/2015/10/09/aws-iot-and-the-mqtt-dot-fx-client.html](http://blog.dougtoppin.name/aws/iot/mqtt/2015/10/09/aws-iot-and-the-mqtt-dot-fx-client.html) I passed along a few tidbits about using the MQTT client with the AWS IoT service.
 
 Since then both the AWS IoT service and the MQTT client have been updated.
 I decided to do an updated post with any new info.

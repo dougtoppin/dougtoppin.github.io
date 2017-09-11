@@ -16,7 +16,7 @@ Like I just did with the Magento open source ecommerce platform.
 A while back I had the same experience with Splunk.
 From wanting to try it to having it fully up and running in less than 15 minutes in the AWS. That's what you call good.
 
-A while back I had the same experience with using Splunk in the AWS and [posted](http://blog.dougtoppin.name/blog/2015/09/02/splunk-quick-and-easy-using-aws/) about it.
+A while back I had the same experience with using Splunk in the AWS and [posted](http://blog.dougtoppin.name/splunk/logging/2015/09/02/splunk-quick-and-easy-using-aws.html) about it.
 
 With Magento it was just as easy and this system is much more complex than Splunk.
 It includes a large number of features associated with store fronts, products and customers.

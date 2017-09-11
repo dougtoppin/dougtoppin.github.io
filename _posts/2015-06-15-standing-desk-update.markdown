@@ -7,7 +7,7 @@ categories: [standingdesk]
 
 ---
 A few months ago I bought a [NextDesk Terra standing desk](http://www.nextdesks.com/terra) and wanted to pass along a update on my experiences with it.
-My original post on it is at [http://blog.dougtoppin.name/blog/2014/09/07/nextdesk-terra-standing-desk-opinions/](http://blog.dougtoppin.name/blog/2014/09/07/nextdesk-terra-standing-desk-opinions/).
+My original post on it is at [http://blog.dougtoppin.name/2014/09/07/nextdesk-terra-standing-desk-opinions.html](http://blog.dougtoppin.name/2014/09/07/nextdesk-terra-standing-desk-opinions.html).
 
 I have had no complaints and for the first time today needed to use it from a sitting position.
 Being able to quickly send it up/down to the position that is most convenient is definitely an advantage.
