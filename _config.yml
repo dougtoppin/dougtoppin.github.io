@@ -10,6 +10,8 @@ github_username:  dougtoppin
 google_analytics: UA-38327782-1
 disqus:
     shortname: dougtoppinsblog
+plugins:
+  - jekyll-sitemap
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
