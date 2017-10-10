@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Do run run open source utilities/containers without controlling what can do?"
+title: "Do you run run open source utilities/containers without controlling what can do?"
 date: 2017-10-10 16:29
 comments: true
 categories: [blog]
