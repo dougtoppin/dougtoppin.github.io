@@ -1,0 +1,24 @@
+---
+layout: post
+title: "AWS Perms and Tools"
+date: 2017-10-22 18:00
+comments: true
+categories: [blog]
+description: (redux) Do you run open source utilities using your AWS admin privileges?
+keywords: aws oss opensource security
+---
+By far and away one of the more challenging things about using the cloud is to follow good security practices even in your personal accounts.
+For example, if you are going to use a tool of some sort for experimentation do you create a user/credentials specific to that tool and usage or do you use your full-up account and perms because it is convenient and quicker?
+You should recognize that if the tool has a bug (or is malicious) you are likely exposing your account in a big way if so.
+
+The Kubernetes kops tool documentation page has a good example of what AWS perms are needed and how to create them at the following link.
+
+This is a good model to follow if you are creating (or using tools) for cloud services. https://github.com/kubernetes/kops/blob/master/docs/aws.md
+
+Something to note on this subject.
+An even deeper aspect to perms is to restrict the perms to specific usages if possible.
+What I mean by that are things like "FullAccess" for IAM.
+If the related key was exposed someone might be able to modify existing or create new roles and policies.
+Instead, you might modify the arn to be very specific about what it has access to and prevent the "everything" aspect of it if possible.
+
+I am sure that there will be more to come on this subject.
