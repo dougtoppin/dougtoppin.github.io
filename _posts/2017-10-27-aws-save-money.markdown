@@ -35,7 +35,7 @@ This may not look like a lot but when you do it regularly in your personal accou
 I am going to do my usual work on the c4.xlarge and if it performs well enough I'll make it a habit.
 
 The key points in this post are to use the spot market if possible and check your instance utilization.
-If you can get by with smaller/cheaper than do so.
+If you can get by with smaller/cheaper then do so.
 
 Don't spend money that you do not have to.
 
