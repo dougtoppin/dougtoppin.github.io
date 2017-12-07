@@ -1,0 +1,61 @@
+---
+layout: post
+title: "AWS re:Invent 2017 review"
+date: 2017-12-07 11:19
+comments: true
+categories: [blog]
+description: My experiences at AWS re:Invent 2017
+keywords: aws reinvent
+---
+
+I attended the AWS re:Invent 2017 conference this year and wanted to pass along some observations.
+The intent this year was to provide the opportunity for attendees to reserve seats in advance for the sessions and hold back 20% of the seating capacity for walk ups.
+Unfortunately, there was an issue with the seat reservation system and I was unable to make any reservations for the first hour that it opened up.
+This resulted in my being unable to make reservations for most of the sessions that I was interested in, primarily those for Alexa and serverless related topics in the Aria hotel.
+
+The first day was by far the most crowded and I ended up having to get in the walk up lines at least 1.5 hours in advance to ensure that I made it in to the session.
+The second day improved somewhat but that may have been due to my planning on being in each line very early so I only focused on a few sessions that I particularly wanted to attend.
+The 3rd through 5th days were quite a bit better and the crowds seemed reduced.
+
+There were 4 venues where sessions were occurring with shuttle buses between them.
+The bus travel time was very unpredictable so I only used them twice to go to the Venetian hotel.
+
+The focus areas for AWS were voice first, serverless, machine learning and containers.
+
+I am a believer in the Alexa (Echo) service and in serverless architectures and re:Invent was a great opportunity to learn more about both.
+
+The sessions that I made it to follow
+
+* Alexa and AWS IoT: Now With 100% More Voice
+* serverless authentication and authorization
+* deep dive on aws cloudformation
+* aws batch: easy & efficient batch computing on AWS
+* keynote (and some of the announcements):
+    * cloud9 - https://aws.amazon.com/cloud9/
+    * business alexa
+    * voice first
+    * serverless - don't pay for idle (lambda, containers, database)
+    * machine learning
+    * transcribe - https://aws.amazon.com/transcribe/
+    * comprehend - https://aws.amazon.com/comprehend/
+    * deeplens - https://aws.amazon.com/deeplens/
+    *  kubernetes support
+    * bare metal workload
+    * aurora severless
+    * automatic text translation
+    * spot instance pause and resume
+* designing multimodal experiences for alexa
+* alexa workshop - petmatch
+* alexa - conversation and memory
+* container networking deep dive with amazon ecs
+* analyzing streaming data in real time with kinesis video streams
+* orchestrating lambda with step functions
+* serverless application repository
+* step function patterns
+* the art and science of conversation applied to alexa skills
+* building alexa analytics using aws
+
+re:Invent is a very motivating experience and I recommend it but in the future I would definitely expect to have reserved seating available or else to have the sessions livestreamed in real time so that they can be watched from any location.
+
+AWS (Amazon) is providing all sorts of amazing services and products that will lead to many fascinating applications.
+
