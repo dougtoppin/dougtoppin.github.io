@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Using the AWS Config Service (with an eye on cost)"
+date: 2018-02-19 15:15
+comments: true
+categories: [blog]
+description: The AWS Config service is helpful for monitoring your account resources but it can get expensive depending on how you use it.
+keywords: aws config cost
+---
+The AWS Config service is extremely helpful for monitoring your account resource utilization.
+It can be configured using rules to detect and report resources that might be unexpected, either in type or quantify for example, that exist in your account.
+An example of an application for this is preventing accidents where excessively large instances are launched.
+A rule can be established that checks for an instance type outside a range of types that would be considered normal for your account.
+Another example is ensuring that the creation of any resource also includes tags to help relate that resource to a project activity.
+
+However, a recent lesson learned taught me to keep an eye on how I use Config.
+I had previously added a rule using `DESIRED_INSTANCE_TYPE` to look for anything outside my usual list of expected instance types.
+Note that this rule is automatically triggered by configuration changes in an account.
+
+Recently, I have been doing a lot of CloudFormation work where I was regularly creating and deleting CF stacks that included a number of ECS EC2 instances.
+During any particular day I might create and delete these stacks several times.
+Each stack contained a variety of resources associated with the application.
+I noticed that my AWS bill seemed larger than usual and the Cost Explorer showed me that it was due to Config.
+
+This caused me to look more carefully at Config pricing which is $2 per rule and $0.003 per configuration item check.
+A configuration item is a resource or the metadata associated with a resource in an account.
+The CF stack creation and deletion activities were causing a large number of configuration item changes resulting in the Config service rule be activated frequently.
+
+The lesson learned is to consider if your purpose for using Config is immediate detection of unexpected resources then the Configuration Change trigger type is most appropriate.
+However, be aware that if your environment is one where there is frequent creation and deletion of resources that may increase your costs as rules may be triggered on each activity.
+
+If you are willing to delay detection of unexpected resources then you might consider a Periodic trigger.
+A Periodic trigger will allow the detection of out of norm activity at an interval of less than immediate.
+The interval can be set to 1, 3, 6, 12 or 24 hours.
+For situations like mine where there is frequent creation and deletion of stacks it might be worthwhile to consider how long the typical stack exists and ensure that the internal is longer than that.
+Doing so should avoid the rule checking during periods were a large number of transient resources exist.
+
+Note that the existing managed Rule associated with checking instance type has a Configuration Change trigger.
+You may need to develop your own Lambda based function to to be used with a Periodic trigger.
+
+More on the AWS Config service can be found at [https://docs.aws.amazon.com/config/latest/developerguide/how-does-config-work.html](https://docs.aws.amazon.com/config/latest/developerguide/how-does-config-work.html)
