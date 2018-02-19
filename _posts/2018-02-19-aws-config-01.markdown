@@ -36,6 +36,6 @@ For situations like mine where there is frequent creation and deletion of stacks
 Doing so should avoid the rule checking during periods were a large number of transient resources exist.
 
 Note that the existing managed Rule associated with checking instance type has a Configuration Change trigger.
-You may need to develop your own Lambda based function to to be used with a Periodic trigger.
+You may need to develop your own Lambda based function to be used with a Periodic trigger.
 
 More on the AWS Config service can be found at [https://docs.aws.amazon.com/config/latest/developerguide/how-does-config-work.html](https://docs.aws.amazon.com/config/latest/developerguide/how-does-config-work.html)
