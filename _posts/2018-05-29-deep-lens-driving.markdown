@@ -12,7 +12,8 @@ This made me think of how the Amazon DeepLens "Smart Camera" might be used by la
 This would help with profiling concerns in that the DeepLens would base the recommendation only on observed behavior and in a consistent fashion.
 
 I ordered a DeepLens at AWS re:Invent 2017 right after it was announced but I have not received it yet.
-I am very interested in what can be done with and am looking forward to it being delivered maybe next month.
+I am very interested in what can be done with it and am looking forward to it being delivered maybe next month.
+The camera uses AWS Machine Learning which I think is pretty cool in that you can develop ML models and then install them on the camera for independent operation.
 
 You can find out more about the camera at [https://aws.amazon.com/deeplens/](https://aws.amazon.com/deeplens/)
 
