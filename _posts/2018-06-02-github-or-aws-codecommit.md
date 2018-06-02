@@ -17,4 +17,16 @@ I have been using AWS CodeCommit on a limited basis for some time and have been 
 
 Using CodeCommit is a little more involved than GitHub but not a decision maker by any comparison.
 
+I use a Mac and have to fiddle around at times to let me be able to use CodeCommit and ran across a tip a while back that is very useful.
+I unfortunately do not remember where I saw this but adding the following to my ~/.ssh/config file lets me use CodeCommit without any trouble on my Mac.
+
+The ```MySshKeyId``` value is from my IAM account console ```SSH keys for AWS CodeCommit``` area.
+The ```keyfile``` is my private key that I created for CodeCommit.
+
+```
+Host git-codecommit.*.amazonaws.com
+    User MySshKeyId
+    IdentityFile ~/.ssh/keyfile
+```
+
 I would appreciate hearing from anyone that has thoughts, opinions or experiences on this subject.
