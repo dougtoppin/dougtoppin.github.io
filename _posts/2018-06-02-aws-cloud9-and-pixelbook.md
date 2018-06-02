@@ -18,6 +18,11 @@ While I am a dedicated Apple fan I would be willing to try an alternative to the
 
 I am entirely willing to have less compute power and storage locally for that cheaper, lighter weight and longer battery life trifecta of doing everything in AWS if possible.
 
+One important point on this is that my MBP can get warm/hot enough that I have to put it down or sit it on an arm rest when I am on the couch.
+I've been wondering what the temperature level on the PixelBook can get to?
+If it always stayed cool enough to keep on my lap that would sway my decision in a big way if everything else was good enough.
+
+
 I need to research a bit more on the PixelBook particularly around using a VPN with it.
 
 More to come on this subject.
