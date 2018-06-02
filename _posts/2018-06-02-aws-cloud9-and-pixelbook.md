@@ -14,8 +14,10 @@ Instead I've been wondering if a PixelBook would be able to effectively do devel
 I am still not a pro at Cloud9 but am able to use it and would like to spend more time with it.
 I use Spot instances quite a bit now and at $0.02 to $0.06 an hour they are an excellent means of reducing compute related costs.
 
-While I am a dedicated Apple fan I would be willing to try an alternative to the MBP that lets me do what I need to more cheaply and with a longer battery life.
+While I am a dedicated Apple fan I would be willing to try an alternative to the MBP that lets me do what I need to just as effectively with an alternative.
 
-I need to research a bit more on the PixelBook particulary around using a VPN with it.
+I am entirely willing to have less compute power and storage locally for that cheaper, lighter weight and longer battery life trifecta of doing everything in AWS if possible.
+
+I need to research a bit more on the PixelBook particularly around using a VPN with it.
 
 More to come on this subject.
