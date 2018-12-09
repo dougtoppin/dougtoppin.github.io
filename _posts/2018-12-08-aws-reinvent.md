@@ -12,7 +12,7 @@ This was the 3rd or 4th time that I have been and this one was excellent.
 The management of the attendees seems a bit better this year than it was in 2017.
 
 My focus this year was in serverless, Lambda and Fargate, and machine learning related topics.
-I stayedin the Aria hotel and made it to 21 sessions during the week.
+I stayed in the Aria hotel and made it to 21 sessions during the week.
 I did not go to the any of the evening activities both because the 3 hour time difference would make it exhausting and because I am there to learn.
 The evening activities would just waste time for me and tire me out.
 
