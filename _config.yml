@@ -2,7 +2,7 @@ title: Doug Toppin's Blog
 author: dougtoppin
 email: dougtoppin@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I have been in software systems development for my entire career and am a private pilot.  I used to think I might be able to turn being a pilot into a job but am still waiting for the US Air Force to call me up.  My interests include cloud stuff, AWS, Linux, OSX, iOS, NodeJS and augmented reality.   I also have a variety of technology, film-making and political interests and am always willing to talk about any of them.
+  I have been in software systems development for my entire career and am a private pilot.  I used to think I might be able to turn being a pilot into a job but am still waiting for the US Air Force to call me up.  My interests include software systems, cloud stuff, specifically AWS, and all of the related cool services it provides. These include Step Functions, Lambda, Fargate, CloudFormation, cdk and numerous others. I also have a variety of technology, film-making and political interests and am always willing to talk about any of them.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.dougtoppin.name" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dougtoppin
