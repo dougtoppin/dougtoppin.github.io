@@ -14,9 +14,3 @@ Now with the apparent collapse of twitter, Mastodon has jumped in popularity.
 I have used each of these in various forms over the years and, if you happen to notice the gap in time here, I fell off the wagon with this blog.
 
 Hopefully, I can get back on the wagon and post some tidbits.
-
-
-
-
-
-
