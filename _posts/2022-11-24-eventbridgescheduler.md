@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mastodon try out"
+title: "Amazon EventBridge Scheduler and DST Support"
 date: 2022-11-24 12:00
 comments: true
 categories: [blog]
