@@ -18,7 +18,7 @@ The one change that I had to make to the example template was the cron schedule 
 
 The result looks like this:
 
-```yaml
+  ```yaml
   TestScheduler:
     Type: AWS::Scheduler::Schedule
     Properties: 
@@ -35,7 +35,7 @@ The result looks like this:
       Target: 
         Arn: !GetAtt ScheduledLambdaFunction.Arn
         RoleArn: !GetAtt MyFirstScheduleRole.Arn
-```
+  ```
 
 This will now work correctly for the entire year without me having to make my twice a year change.
 
