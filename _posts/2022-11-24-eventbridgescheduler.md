@@ -37,4 +37,6 @@ The result looks like this:
 
 This will now work correctly for the entire year without me having to make my twice a year change.
 
+The EventBridge Scheduler documentation is at https://docs.aws.amazon.com/eventbridge/latest/userguide/scheduled-events.html
 
+AWS announcements can be found at https://aws.amazon.com/new
