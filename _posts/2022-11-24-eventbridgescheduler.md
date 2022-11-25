@@ -12,7 +12,7 @@ The rule is to execute a Step Function every work day at 3 particular times.
 Because of DST changes during the year I had to adjust the start time by adding or subtracting an hour.
 
 I decided to instead use the Amazon EventBridge Scheduler which supports DST.
-#serverlessland has an example of exactly what I needed at https://serverlessland.com/patterns/eventbridge-schedule-to-lambda
+#serverlessland has an example of exactly what I needed at [https://serverlessland.com/patterns/eventbridge-schedule-to-lambda](https://serverlessland.com/patterns/eventbridge-schedule-to-lambda)
 
 The one change that I had to make to the example template was the cron schedule and timezone that I wanted it to use.
 
@@ -37,8 +37,24 @@ The result looks like this:
         RoleArn: !GetAtt MyFirstScheduleRole.Arn
   ```
 
-This will now work correctly for the entire year without me having to make my twice a year change.
+In my SAM project I will switch this to my Step Function and it will now work correctly for the entire year without me having to make my twice a year change.
 
-The EventBridge Scheduler documentation is at https://docs.aws.amazon.com/eventbridge/latest/userguide/scheduled-events.html
+Note that you also need to allow the scheduler principal to perform an assumeRole for this if you already have a role defined for your Step Function.
 
-AWS announcements can be found at https://aws.amazon.com/new
+  ```yaml
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - scheduler.amazonaws.com
+            Action:
+              - sts:AssumeRole
+  ```
+
+[https://serverlessland.com/](https://serverlessland.com/) is always an excellent place to find examples, patterns, and tips in general.
+
+The EventBridge Scheduler documentation is at [https://docs.aws.amazon.com/eventbridge/latest/userguide/scheduled-events.html](https://docs.aws.amazon.com/eventbridge/latest/userguide/scheduled-events.html)
+
+AWS announcements can be found at [https://aws.amazon.com/new](https://aws.amazon.com/new)
