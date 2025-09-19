@@ -3,3 +3,9 @@
 ---
 
 @import "minima";
+
+// Fix social media icon alignment
+.social-media-list li a {
+  display: flex;
+  align-items: center;
+}
