@@ -63,6 +63,6 @@ This exercise is a good way to experience a variety of things including a bit of
 
 Links:
 
-https://aws.amazon.com/blogs/mt/manage-raspberry-pi-devices-using-aws-systems-manager/
-https://docs.aws.amazon.com/systems-manager/latest/userguide/document-schemas-features.html
-https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances-advanced.html
+- https://aws.amazon.com/blogs/mt/manage-raspberry-pi-devices-using-aws-systems-manager/
+- https://docs.aws.amazon.com/systems-manager/latest/userguide/document-schemas-features.html
+- https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances-advanced.html
